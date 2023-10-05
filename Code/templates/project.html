@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Timeline</title>
+    <style>
+        .division {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .division img {
+            width: 100%;
+            height: auto;
+        }
+        /* Add CSS for the button */
+        .back-button {
+            background-color: blue; /* Blue background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer; /* Mouse pointer on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Timeline</h1>
+    <div class="division">
+        <img src="/static/null_columns.png" alt="Image 1">
+        <marquee behavior="scroll" direction="center">
+        <h1>Removing The Columns Where There Are Null Above 60 %</h1>
+        </marquee>
+        <p>this is to handle missing data, which is a common issue in data analysis and machine learning. Columns with a large number of missing values (in this case, more than 40%) can be less useful for analysis or predictive modeling, because they don’t provide enough information. By removing these columns, we can potentially improve the performance and accuracy of subsequent data analysis or machine learning models.%</p>
+    </div>
+    <div class="division">
+        <img src="/static/cleaning.png" alt="Image 2">
+        <marquee behavior="scroll" direction="center">
+            <h1>Converting The Columns DataTypes</h1>
+        </marquee>
+        <p>this code helps to clean the DataFrame by handling missing values, making it ready for further analysis or modeling</p>
+    </div>
+    <div class="division">
+        <img src="/static/IQR.png" alt="Image 3">
+        <marquee behavior="scroll" direction="center">
+            <h1>IQR CAPPING</h1>
+        </marquee>
+        <p>Interquartile Range (IQR) capping is a technique used in statistics to handle outliers. Outliers are data points that are significantly different from other observations. They can affect the results of the data analysis and statistical modeling in a negative way by skewing the results and decreasing the accuracy of the predictions.
+
+            The Interquartile Range (IQR) is a measure of statistical dispersion, or in simpler terms, it's a measure of how spread out the values in a data set are. It's calculated as the difference between the 75th percentile (Q3) and the 25th percentile (Q1) of the data.
+            
+            IQR capping, also known as "IQR outlier removal" or "outlier capping", is a technique used to remove outliers from the data. Here's how it works:
+            
+            1. Calculate the IQR of the data.
+            2. Define the lower bound as Q1 - 1.5 * IQR and the upper bound as Q3 + 1.5 * IQR.
+            3. Any data point that falls below the lower bound or above the upper bound is considered an outlier.
+            4. These outliers are then capped to the lower and upper bounds, meaning that any value below the lower bound is set to the lower bound, and any value above the upper bound is set to the upper bound.
+            
+            This method is effective because it only removes extreme values and it uses the IQR, which is robust against outliers. However, like any other method, it should be used with caution because if not used properly, it can lead to loss of information or biased results.</p>
+    </div>
+    <div class="division">
+        <img src="/static/selection.png" alt="Image 4">
+        <marquee behavior="scroll" direction="center">
+            <h1>Clustering Model Selection Using 3 Different Metrics</h1>
+        </marquee>
+        <p>The Silhouette Score is a measure of how similar an object is to its own cluster compared to other clusters. The best value is 1 and the worst value is -1.
+            The Calinski-Harabasz Index is a ratio of the sum of between-clusters dispersion and of inter-cluster dispersion for all clusters (where dispersion is defined as the sum of distances squared). The higher the value, the better.
+            The Davies-Bouldin Index signifies the average ‘similarity’ between clusters, where the similarity is a measure that compares the distance between clusters with the size of the clusters themselves. Zero is the lowest possible score.</p>
+    </div>
+    <div class="division">
+        <img src="/static/classification.png" alt="Image 5">
+        <marquee behavior="scroll" direction="center">
+            <h1>Selcting The best classification Model</h1>
+        </marquee>
+        <p>The Best classification Model For Our Dataset is RandomForestclassifier Model</p>
+    </div>
+    <div class="division">
+        <img src="/static/classification.png" alt="Image 5">
+        <marquee behavior="scroll" direction="center">
+            <h1>Tuning The Selected Model</h1>
+        </marquee>
+        <p>Improve Model Performance: The primary reason for hyperparameter tuning is to find the optimal combination of hyperparameters that minimizes a predefined loss function to give the best possible performance of the model.
+
+            Prevent Overfitting and Underfitting: Hyperparameter tuning helps in finding a balance between bias and variance. A model with high bias (underfitting) oversimplifies the model and performs poorly on both training and test data. A model with high variance (overfitting) overcomplicates the model and performs well on training data but poorly on unseen data. Tuning hyperparameters like regularization parameters can help prevent both overfitting and underfitting.
+            
+            Optimize Resources: Some hyperparameters control how much computational resources the model will use, like the number of hidden layers or units in a neural network, or the depth of a decision tree. By tuning these, we can find a good trade-off between computational cost and model performance.
+            
+            Better Understanding of Model and Problem: The process of hyperparameter tuning can provide valuable insights into the dynamics of the model and its relationship with the underlying problem. It can help us understand which hyperparameters are most important, how they interact, and what values make sense.</p>
+    </div>
+    <div class="division">
+        <img src="/static/saving.png" alt="Image 6">
+        <marquee behavior="scroll" direction="center">
+            <h1>Saving The Model Using Joblib For Deployment</h1>
+        </marquee>
+        <p>Reusability: Once you have trained your model, you can save it and reuse it later without having to retrain it. This can save a lot of time, especially with large datasets or complex models.
+
+            Sharing: If you want to share your model with others, perhaps for deployment in a different system, saving your model makes it easy to do so.
+            
+            Deployment: In real-world applications, models are trained on one set of data and used to make predictions on new, unseen data. By saving your model, you can easily use it to make predictions in the future.</p>
+    </div>
+    <div class="division">
+        <img src="/static/deployment.png" alt="Image 7">
+        <marquee behavior="scroll" direction="center">
+            <h1>Deploying our Saved model Using Flask</h1>
+        </marquee>
+        <p> Output - Cluster 0</p>
+    </div>
+    <div class="division">
+        <img src="/static/test1.png" alt="Image 7">
+        <marquee behavior="scroll" direction="center">
+            <h1>testing our model on our flask website</h1>
+        </marquee>
+        <p> Output - Cluster 0</p>
+    </div>
+    <div class="division">
+        <img src="/static/test2.png" alt="Image 8">
+        <marquee behavior="scroll" direction="center">
+            <h1>testing our model on our flask website</h1>
+        </marquee>
+        <p>Output - Cluster 1</p>
+    </div>
+    <a href="/index" class="back-button">Back to Home Page</a>
+    <a href="/visualizations" class="back-button">Visualizations</a>
+</body>
+</html>
+
+

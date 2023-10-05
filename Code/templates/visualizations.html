@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizations</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        /* Add CSS for the button */
+        .back-button {
+            background-color: blue; /* Blue background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer; /* Mouse pointer on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div>{{plot1_div|safe}}</div>
+    <marquee behavior="scroll" direction="center">
+    <h1>Best K-Values (or) No.Of Clusters Using Line Plot</h1>
+    </marquee>
+    <div>{{plot2_div|safe}}</div>
+    <marquee behavior="scroll" direction="center">
+    <h1>Clusters Division In The Data Using Scatter Plot</h1>
+    </marquee>
+    <div>{{plot3_div|safe}}</div>
+    <marquee behavior="scroll" direction="center">
+    <h1>Clusters Count In The Data Using Bar Plot</h1>
+    </marquee>
+    <div>{{plot4_div|safe}}</div>
+    <marquee behavior="scroll" direction="center">
+    <h1>Correaltions Between Variables Using Heatmap</h1>
+    </marquee>
+    <div>{{plot5_div|safe}}</div>
+    <marquee behavior="scroll" direction="center">
+    <h1>3d Scatter Plot Between Variables Using Plotly</h1>
+    </marquee>
+    <div>{{plot6_div|safe}}</div>
+    <marquee behavior="scroll" direction="center">
+    <h1>Outliers Check Using Dynamic Box Plot Of Each Variable</h1>
+    </marquee>
+
+    <!-- Add a link back to the home page -->
+    <a href="/index" class="back-button">Back to Home Page</a>
+    <a href="/project" class="back-button">Project</a>
+</body>
+</html>
